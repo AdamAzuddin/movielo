@@ -1,9 +1,17 @@
-import React from 'react'
+import React from "react";
 
 const SearchBar = () => {
   return (
-    <div>SearchBar</div>
-  )
-}
+    <div>
+      <input
+        type="text"
+        placeholder="Search for a movie, drama or genre ..."
+        style={{width: '350px', borderRadius:'20px', padding:'3px'}}
+      />
+
+      
+    </div>
+  );
+};
 
 export default SearchBar;
