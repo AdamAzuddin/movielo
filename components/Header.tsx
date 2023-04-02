@@ -1,5 +1,6 @@
-// set this component to client component to make sure using useState,
-// useEffect etc is possible in its children
+/*set this component to client component
+ to make sure using useState,
+ useEffect etc is possible in its children */
 'use client';
 
 import React from "react";
