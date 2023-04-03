@@ -1,13 +1,13 @@
 import React from 'react'
 import styles from '../../page.module.css'
-import SeriesPageComponent from './SeriesPage'
+import SignUpComponent from './signUp'
 
-const SeriesPage = () => {
+const SignUpPage = () => {
   return (
     <div className={styles.main}>
-      <SeriesPageComponent/>
+      <SignUpComponent/>
     </div>
   )
 }
 
-export default SeriesPage
+export default SignUpPage

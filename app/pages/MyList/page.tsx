@@ -1,14 +1,14 @@
 import React from 'react'
 import styles from "../../page.module.css";
-import GenrePageContent from './genrePage';
+import MyListPageComponent from './MyListPage';
 
 
-const GenrePage = () => {
+const MyListPage = () => {
   return (
     <div className={styles.main}>
-      <GenrePageContent/>
+      <MyListPageComponent/>
     </div>
   )
 }
 
-export default GenrePage
+export default MyListPage

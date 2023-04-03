@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
+import styles from "../../page.module.css";
+import MoviesPageComponent from "./moviesPage";
 
 const MoviesPage = () => {
   return (
-    <div>MoviesPage</div>
-  )
-}
+    <div className={styles.main}>
+      <MoviesPageComponent />
+    </div>
+  );
+};
 
-export default MoviesPage
+export default MoviesPage;

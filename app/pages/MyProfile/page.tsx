@@ -1,8 +1,12 @@
 import React from 'react'
+import styles from '../../page.module.css'
+import MyProfilePageComponent from './MyProfilePage'
 
 const MyProfilePage = () => {
   return (
-    <div>MyProfile</div>
+    <div className={styles.main}>
+      <MyProfilePageComponent/>
+    </div>
   )
 }
 

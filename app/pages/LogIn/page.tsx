@@ -1,14 +1,13 @@
 import React from 'react'
+import LogInPageComponent from './logInPage'
 import styles from "../../page.module.css";
-import GenrePageContent from './genrePage';
 
-
-const GenrePage = () => {
+const LogInPage = () => {
   return (
     <div className={styles.main}>
-      <GenrePageContent/>
+      <LogInPageComponent/>
     </div>
   )
 }
 
-export default GenrePage
+export default LogInPage

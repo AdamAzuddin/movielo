@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
+import styles from "../../page.module.css";
+import AboutPageContent from "./aboutPage";
 
 const AboutPage = () => {
   return (
-    <div>AboutPage</div>
-  )
-}
+    <div className={styles.main}>
+      <AboutPageContent />
+    </div>
+  );
+};
 
-export default AboutPage
+export default AboutPage;
