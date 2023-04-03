@@ -36,3 +36,31 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Server and Client Side Component
+
+All component is server side by default which mean you cannot use useState,useEffect hooks etc. To solve this, add this line of code before any import in a parent file where it's children need to be client side:
+
+
+```
+'use client';
+```
+
+
+## Routing
+
+In Next JS 13, you need to create a new folder inside of your app folder. The subfolder of that folder must contain page.tsx file of which next will recognise to open as part of url. For example:
+
+```
+app
+├── pages
+│   ├── about
+│   │   ├── page.tsx
+│   │   └── aboutPage.tsx
+└── layout.tsx
+```
+http://localhost:3000/pages/about will open the page.tsx in this example
+
+Make sure in aboutPage.tsx, the component is name something like aboutPageComponent to avoid 'Import declaration conflicts with local declaration ' error when you're trying to import the aboutPage component
+
+
