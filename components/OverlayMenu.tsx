@@ -1,16 +1,17 @@
 import React from 'react'
+import Link from 'next/link'
 
 const OverlayMenu = () => {
   return (
     <div>
-      <h2 style={{color:'silver'}}>My Account</h2>
-      <h2 style={{color:'silver'}}>Username</h2>
-      <h2 style={{color:'silver'}}>Genre</h2>
-      <h2 style={{color:'silver'}}>Movies</h2>
-      <h2 style={{color:'silver'}}>Series</h2>
-      <h2 style={{color:'silver'}}>My List</h2>
-      <h2 style={{color:'silver'}}>About</h2>
-      <h2 style={{color:'silver'}}>Log Out</h2>
+      <Link style={{color:'silver'}} href='../pages/MyProfile'>My Account</Link>
+      <Link style={{color:'silver'}} href='../pages/MyProfile'>Username</Link>
+      <Link style={{color:'silver'}} href='../pages/Genre'>Genre</Link>
+      <Link style={{color:'silver'}} href='../pages/Movies'>Movies</Link>
+      <Link style={{color:'silver'}} href='../pages/Series'>Series</Link>
+      <Link style={{color:'silver'}} href='../pages/MyList'>My List</Link>
+      <Link style={{color:'silver'}} href='../pages/About'>About</Link>
+      <div style={{color:'silver'}}>Log Out</div>
     </div>
     
   )
