@@ -4,42 +4,11 @@
 "use client";
 
 import React from "react";
-import Menu from "./Menu";
 import SearchBar from "./SearchBar";
 import { useState, useEffect, useRef } from "react";
 import { IoMdMenu } from "react-icons/io";
-import Link from "next/link";
+import OverlayMenu from "./OverlayMenu";
 
-const data = [
-  {
-    name: "My Account",
-    Link: "../pages/MyProfile",
-  },
-  {
-    name: "Genre",
-    Link: "/../pages/Genre",
-  },
-  {
-    name: "Movies",
-    Link: "/../pages/Movies",
-  },
-  {
-    name: "Series",
-    Link: "/../pages/Series",
-  },
-  {
-    name: "My List",
-    Link: "/../pages/MyList",
-  },
-  {
-    name: "About",
-    Link: "/../pages/About",
-  },
-  {
-    name: "Log Out",
-    Link: "/../pages/SignIn",
-  },
-];
 
 const Header = () => {
   const [active, setActive] = useState(false);
@@ -69,6 +38,8 @@ const Header = () => {
   const handleMenuClick = () => {
     setActive(!active);
   };
+
+  
 
   return (
     <div>
@@ -109,19 +80,7 @@ const Header = () => {
           transition: "all 0.5s ease-in-out",
         }}
       >
-        <ul style={{ listStyleType: "none" }}>
-          {data.map((item, i) => (
-            <li key={i} style={{padding: "4vh 0", borderBottom: "0.5px solid white"}}>
-              <Link
-                href={item.Link}
-                onClick={() => setActive(false)}
-                style={{ color: "white", paddingLeft:"15px" }}
-              >
-                {item.name}
-              </Link>
-            </li>
-          ))}
-        </ul>
+        <OverlayMenu activeState={[active,setActive]}/>
       </div>
     </div>
   );
