@@ -1,20 +1,47 @@
-import React from 'react'
-import Link from 'next/link'
+import React from "react";
+import Link from "next/link";
 
 const OverlayMenu = () => {
   return (
-    <div>
-      <Link style={{color:'silver'}} href='../pages/MyProfile'>My Account</Link>
-      <Link style={{color:'silver'}} href='../pages/MyProfile'>Username</Link>
-      <Link style={{color:'silver'}} href='../pages/Genre'>Genre</Link>
-      <Link style={{color:'silver'}} href='../pages/Movies'>Movies</Link>
-      <Link style={{color:'silver'}} href='../pages/Series'>Series</Link>
-      <Link style={{color:'silver'}} href='../pages/MyList'>My List</Link>
-      <Link style={{color:'silver'}} href='../pages/About'>About</Link>
-      <div style={{color:'silver'}}>Log Out</div>
-    </div>
-    
-  )
-}
+    <nav>
+      <div style={{height:"50px"}}>
+        <Link style={{ color: "silver" }} href="../pages/MyProfile" >
+          My Account
+        </Link>
+      </div>
+      <div style={{height:"50px"}}>
+        <Link style={{ color: "silver" }} href="../pages/MyProfile">
+          Username
+        </Link>
+      </div>
+      <div style={{height:"50px"}}>
+        <Link style={{ color: "silver" }} href="../pages/Genre">
+          Genre
+        </Link>
+      </div>
+      <div style={{height:"50px"}}>
+        <Link style={{ color: "silver" }} href="../pages/Movies">
+          Movies
+        </Link>
+      </div>
+      <div style={{height:"50px"}}>
+        <Link style={{ color: "silver" }} href="../pages/Series">
+          Series
+        </Link>
+      </div>
+      <div style={{height:"50px"}}>
+        <Link style={{ color: "silver" }} href="../pages/MyList">
+          My List
+        </Link>
+      </div>
+      <div style={{height:"50px"}}>
+        <Link style={{ color: "silver" }} href="../pages/About">
+          About
+        </Link>
+      </div>
+      <div style={{ color: "silver" }}>Log Out</div>
+    </nav>
+  );
+};
 
-export default OverlayMenu
+export default OverlayMenu;
