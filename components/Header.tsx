@@ -12,15 +12,19 @@ import OverlayMenu from "./OverlayMenu";
 
 const Header = () => {
   const [active, setActive] = useState(false);
+  // set an empty div element
   const menuRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleOutsideClick = (event: any) => {
+      // checks if the menuRef exists and 
+      //if the click event target is not contained within the menuRef element
       if (menuRef.current && !menuRef.current.contains(event.target)) {
         setActive(false);
       }
     };
 
+    //if mouse is clicked
     document.addEventListener("mousedown", handleOutsideClick);
     return () => {
       document.removeEventListener("mousedown", handleOutsideClick);
@@ -28,10 +32,13 @@ const Header = () => {
   }, [menuRef]);
 
   useEffect(() => {
+    // body is not scrollable wj=hen menu is in 
+    // active state
     document.body.style.overflow = active ? "hidden" : "auto";
   }, [active]);
 
   useEffect(() => {
+    // root html element is unscrollable if menu active
     document.documentElement.style.overflow = active ? "hidden" : "auto";
   })
 
@@ -76,6 +83,7 @@ const Header = () => {
           width: "40%",
           height: "100vh",
           background: "#1A1A1A ",
+          // animation
           transform: active ? "translateX(0%)" : "translateX(-100%)",
           transition: "all 0.5s ease-in-out",
         }}

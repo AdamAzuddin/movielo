@@ -33,7 +33,7 @@ const data = [
 ];
 
 const OverlayMenu = (props: any) => {
-
+  // accept useState as prop
   const [active, setActive] = props.activeState
   return (
     <>
