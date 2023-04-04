@@ -62,6 +62,10 @@ const Header = () => {
     document.body.style.overflow = active ? "hidden" : "auto";
   }, [active]);
 
+  useEffect(() => {
+    document.documentElement.style.overflow = active ? "hidden" : "auto";
+  })
+
   const handleMenuClick = () => {
     setActive(!active);
   };
@@ -70,7 +74,7 @@ const Header = () => {
     <div>
       <div
         style={{
-          background: "linear-gradient(315deg, #b1bfd8 0%, #667eaa 74%)",
+          background: "#0B253F",
         }}
       >
         <div
@@ -100,15 +104,19 @@ const Header = () => {
           position: "fixed",
           width: "40%",
           height: "100vh",
-          background: "linear-gradient(150deg, #b1bfd8 0%, #667eaa 74%)",
+          background: "#1A1A1A ",
           transform: active ? "translateX(0%)" : "translateX(-100%)",
           transition: "all 0.5s ease-in-out",
         }}
       >
         <ul style={{ listStyleType: "none" }}>
           {data.map((item, i) => (
-            <li key={i}>
-              <Link href={item.Link} onClick={() => setActive(false)}>
+            <li key={i} style={{padding: "4vh 0", borderBottom: "0.5px solid white"}}>
+              <Link
+                href={item.Link}
+                onClick={() => setActive(false)}
+                style={{ color: "white", paddingLeft:"15px" }}
+              >
                 {item.name}
               </Link>
             </li>
