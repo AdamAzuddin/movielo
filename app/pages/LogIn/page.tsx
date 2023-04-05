@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react'
 import LogInPageComponent from './logInPage'
 import styles from "../../page.module.css";
