@@ -8,16 +8,19 @@ import SearchBar from "./SearchBar";
 import { useState, useEffect, useRef } from "react";
 import { IoMdMenu } from "react-icons/io";
 import OverlayMenu from "./OverlayMenu";
-
+import Button from "@mui/material/Button";
+import { useRouter } from "next/navigation";
 
 const Header = () => {
   const [active, setActive] = useState(false);
   // set an empty div element
   const menuRef = useRef<HTMLDivElement>(null);
 
+  const router = useRouter()
+
   useEffect(() => {
     const handleOutsideClick = (event: any) => {
-      // checks if the menuRef exists and 
+      // checks if the menuRef exists and
       //if the click event target is not contained within the menuRef element
       if (menuRef.current && !menuRef.current.contains(event.target)) {
         setActive(false);
@@ -32,7 +35,7 @@ const Header = () => {
   }, [menuRef]);
 
   useEffect(() => {
-    // body is not scrollable wj=hen menu is in 
+    // body is not scrollable wj=hen menu is in
     // active state
     document.body.style.overflow = active ? "hidden" : "auto";
   }, [active]);
@@ -40,14 +43,15 @@ const Header = () => {
   useEffect(() => {
     // root html element is unscrollable if menu active
     document.documentElement.style.overflow = active ? "hidden" : "auto";
-  })
+  });
 
   const handleMenuClick = () => {
     setActive(!active);
   };
 
-  
-
+  const onClickSignIn = () =>{
+    
+  }
   return (
     <div>
       <div
@@ -74,6 +78,19 @@ const Header = () => {
           <div style={{ marginLeft: "auto", marginRight: "auto" }}>
             <SearchBar />
           </div>
+
+          <div style={{margin:"5px"}}>
+            <Button variant="contained" onClick={()=> router.push
+            ('/../pages/LogIn')} >
+              Log in
+            </Button>
+          </div>
+          <div style={{margin:"5px"}}>
+            <Button variant="outlined" onClick={()=> router.push
+            ('/../pages/SignUp')} >
+              Sign up
+            </Button>
+          </div>
         </div>
       </div>
       <div
@@ -88,7 +105,7 @@ const Header = () => {
           transition: "all 0.5s ease-in-out",
         }}
       >
-        <OverlayMenu activeState={[active,setActive]}/>
+        <OverlayMenu activeState={[active, setActive]} />
       </div>
     </div>
   );
