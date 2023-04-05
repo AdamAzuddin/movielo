@@ -49,9 +49,6 @@ const Header = () => {
     setActive(!active);
   };
 
-  const onClickSignIn = () =>{
-    
-  }
   return (
     <div>
       <div
@@ -97,12 +94,13 @@ const Header = () => {
         ref={menuRef}
         style={{
           position: "fixed",
-          width: "40%",
+          width: "70%",
           height: "100vh",
-          background: "#1A1A1A ",
+          background: "white ",
           // animation
           transform: active ? "translateX(0%)" : "translateX(-100%)",
           transition: "all 0.5s ease-in-out",
+          zIndex: '1000'
         }}
       >
         <OverlayMenu activeState={[active, setActive]} />

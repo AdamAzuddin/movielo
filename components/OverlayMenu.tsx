@@ -39,11 +39,11 @@ const OverlayMenu = (props: any) => {
     <>
       <ul style={{ listStyleType: "none" }}>
           {data.map((item, i) => (
-            <li key={i} style={{padding: "4vh 0", borderBottom: "0.5px solid white"}}>
+            <li key={i} style={{padding: "4vh 0", borderBottom: "0.5px solid black"}}>
               <Link
                 href={item.Link}
                 onClick={() => setActive(false)}
-                style={{ color: "white", paddingLeft:"15px" }}
+                style={{paddingLeft:"15px" }}
               >
                 {item.name}
               </Link>
