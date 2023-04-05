@@ -5,7 +5,7 @@ import { Button } from "@material-ui/core";
 const SignUpComponent = () => {
   return <div>
   <h1>Log in to your account</h1>
-  <h2>
+  <h2 style={{marginBottom:"20px", marginTop:"20px"}}>
     Discover thousands of movies and series <br/> from popular streaming services
     <br/> all at one place
   </h2>
